@@ -1,0 +1,14 @@
+{
+  "name": "cuekitvoltz",
+  "description": "The cuekitvoltz Claude Code skills for Remotion videos.",
+  "owner": {
+    "name": "Kunal"
+  },
+  "plugins": [
+    {
+      "name": "cuekitvoltz",
+      "source": "./",
+      "description": "Motion director, voice director and video QA skills for Remotion videos built on the cuekitvoltz kit."
+    }
+  ]
+}

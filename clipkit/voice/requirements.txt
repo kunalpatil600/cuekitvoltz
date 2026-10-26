@@ -1,0 +1,13 @@
+# cuekitvoltz voice director, core: Kokoro voices, word alignment, lip-sync. Python 3.11.
+# Installed by `npx cuekitvoltz download voice` (or init). Chatterbox, the expressive engine, is in
+# requirements-chatterbox.txt. PyTorch is pinned to what Chatterbox needs, so adding it later doesn't
+# swap the installed build; on machines without an NVIDIA GPU the CLI installs the smaller CPU build first.
+torch==2.6.0
+torchaudio==2.6.0
+kokoro==0.9.4
+soundfile
+librosa==0.11.0
+pyloudnorm
+numpy<2
+# spaCy English model used by Kokoro's G2P (misaki); installed up front because uv venvs have no pip for spaCy to self-download
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl

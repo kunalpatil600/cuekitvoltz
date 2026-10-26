@@ -1,0 +1,10 @@
+node_modules/
+dist/
+renders/
+out/
+.venv-voice/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+.tmp-themes/

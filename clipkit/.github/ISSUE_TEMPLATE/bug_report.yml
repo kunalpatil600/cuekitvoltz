@@ -1,0 +1,41 @@
+name: Bug report
+description: Something renders wrong, crashes or doesn't work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you expected, and what you got instead. A still or a short clip helps a lot.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: A minimal composition or the example id, the frame, and the command you ran.
+      placeholder: |
+        npx cuekitvoltz stills my-video 120 --gpu
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: cuekitvoltz 0.1.0, remotion 4.0.535, three 0.170.0, Node 22
+    validations:
+      required: true
+  - type: dropdown
+    id: render
+    attributes:
+      label: Render mode
+      options:
+        - Remotion Studio preview
+        - Software (default)
+        - GPU (--gpu / chrome-for-testing)
+        - Remotion Lambda or another cloud renderer
+  - type: input
+    id: os
+    attributes:
+      label: OS and GPU
+      placeholder: Ubuntu 24.04, RTX 3060

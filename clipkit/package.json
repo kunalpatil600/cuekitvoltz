@@ -1,0 +1,100 @@
+{
+  "name": "cuekitvoltz",
+  "version": "0.1.0",
+  "description": "Studio-grade motion, 3D, voice sync and QA for Remotion videos, built to be driven by Claude Code.",
+  "license": "MIT",
+  "author": "Kunal",
+  "type": "module",
+  "keywords": [
+    "remotion",
+    "video",
+    "motion-design",
+    "animation",
+    "motion-blur",
+    "transitions",
+    "three",
+    "text-to-speech",
+    "lip-sync",
+    "claude-code"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "sideEffects": [
+    "./dist/index.js"
+  ],
+  "bin": {
+    "cuekitvoltz": "bin/cuekitvoltz.mjs"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "skills",
+    "voice/*.py",
+    "voice/*.txt",
+    "voice/refs",
+    "voice/README.md",
+    ".claude-plugin"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "kit:check": "node scripts/kit-check.mjs",
+    "test:themes": "node scripts/smoke-themes.mjs",
+    "check": "npm run typecheck && npm run kit:check && npm run test:themes",
+    "stills": "node bin/cuekitvoltz.mjs stills",
+    "render": "node bin/cuekitvoltz.mjs render",
+    "direct": "node bin/cuekitvoltz.mjs direct",
+    "hear": "node bin/cuekitvoltz.mjs hear",
+    "voice:setup": "node bin/cuekitvoltz.mjs download voice chatterbox",
+    "gl-probe": "node scripts/gl-probe.mjs",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "@react-three/fiber": "^9.0.0",
+    "@remotion/google-fonts": "^4.0.535",
+    "@remotion/paths": "^4.0.535",
+    "@remotion/shapes": "^4.0.535",
+    "@remotion/three": "^4.0.535",
+    "lucide": ">=1.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.535",
+    "three": ">=0.170.0"
+  },
+  "peerDependenciesMeta": {
+    "lucide": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@react-three/fiber": "9.1.2",
+    "@remotion/bundler": "4.0.535",
+    "@remotion/cli": "4.0.535",
+    "@remotion/google-fonts": "4.0.535",
+    "@remotion/paths": "4.0.535",
+    "@remotion/renderer": "4.0.535",
+    "@remotion/shapes": "4.0.535",
+    "@remotion/three": "4.0.535",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.170.0",
+    "esbuild": "0.28.1",
+    "lucide": "1.48.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.535",
+    "three": "0.170.0",
+    "typescript": "7.0.2"
+  }
+}

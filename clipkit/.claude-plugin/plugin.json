@@ -1,0 +1,10 @@
+{
+  "name": "cuekitvoltz",
+  "version": "0.1.0",
+  "description": "Claude Code skills for studio-grade Remotion videos with the cuekitvoltz kit: a motion director, a voice director and video QA.",
+  "author": {
+    "name": "Kunal"
+  },
+  "license": "MIT",
+  "keywords": ["remotion", "video", "motion-design", "voice-over", "qa"]
+}

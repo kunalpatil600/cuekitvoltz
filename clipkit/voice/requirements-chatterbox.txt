@@ -1,0 +1,5 @@
+# Chatterbox-Turbo, the engine that acts out [emotion] tags. Install after requirements.txt
+# (`npx cuekitvoltz download chatterbox`).
+chatterbox-tts==0.1.7
+# Chatterbox's watermarker (resemble-perth) imports pkg_resources, which setuptools 81+ dropped
+setuptools<81

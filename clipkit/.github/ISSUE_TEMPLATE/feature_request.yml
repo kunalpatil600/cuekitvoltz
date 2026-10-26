@@ -1,0 +1,16 @@
+name: Feature request
+description: A new transition, object, studio, voice feature or workflow
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you'd like
+      description: What it should look or sound like. References (a clip, a frame) help.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What it's for
+      description: The video you're trying to make, and what's missing today.
